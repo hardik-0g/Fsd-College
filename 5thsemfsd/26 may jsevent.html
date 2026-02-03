@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Toggle</title>
+</head>
+<body style="background-color: white;">
+  <button onclick="button()">button</button>
+
+  <script>
+    let isWhite = true;
+
+    function button() {
+      if (isWhite) {
+        document.body.style.backgroundColor = "black";
+        console.log("black");
+      } else {
+        document.body.style.backgroundColor = "white";
+        console.log("white");
+      }
+      isWhite = !isWhite;
+    }
+  </script>
+</body>
+</html>

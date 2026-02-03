@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form onsubmit="return sub()" action="submit.html">
+    Name : <input type="text" id="A" placeholder="Name"><br>
+    Roll No. : <input type="text" id="B" placeholder="Roll No."><br>
+    Mobile No. : <input type="text" id="C" placeholder="Mobile No."><br>
+    Password : <input type="password" id="D" placeholder="Password"><br>
+    Confirm Password : <input type="password" id="E" placeholder="Confirm Password"><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function sub() {
+      let a = document.getElementById("A").value;
+      let b = document.getElementById("B").value;
+      let c = document.getElementById("C").value;
+      let d = document.getElementById("D").value;
+      let e = document.getElementById("E").value;
+
+      if (a === "" || b === "" || c === "" || d === "" || e === "") {
+        alert("Must enter all fields");
+        return false;
+      } else if (c.length !== 10) {
+        alert("Mobile number must be exactly 10 digits");
+        return false;
+      } else if (isNaN(c)) {
+        alert("Mobile number must contain only digits");
+        return false;
+      } else if (d !== e) {
+        alert("Passwords do not match");
+        return false;
+
+      }
+      else if (c.length<10 || e.length<10){
+
+      
+        alert("Password must be atleast less than 10")
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+
+</body>
+</html>
