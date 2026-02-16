@@ -1,0 +1,9 @@
+function LoginStatus({ isLoggedIn }) {
+  return (
+    <h2>
+      {isLoggedIn ? "Welcome back!" : "Please log in."}
+    </h2>
+  );
+}
+
+export default LoginStatus;
